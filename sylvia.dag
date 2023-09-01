@@ -1,0 +1,34 @@
+JOB 0 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 0 jobNumber="0" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 1 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 1 jobNumber="1" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 2 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 2 jobNumber="2" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 3 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 3 jobNumber="3" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 4 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 4 jobNumber="4" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 5 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 5 jobNumber="5" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 6 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 6 jobNumber="6" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 7 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 7 jobNumber="7" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 8 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 8 jobNumber="8" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 9 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 9 jobNumber="9" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+JOB 10 /home/sylvia.biscoveanu/condor/condor.sub
+VARS 10 jobNumber="10" ld_library_path="/ldcg/matlab_r2012a/runtime/glnxa64:/ldcg/matlab_r2012a/sys/os/glnxa64:/ldcg/matlab_r2012a/bin/glnxa64:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64/server:/ldcg/matlab_r2012a/sys/java/jre/glnxa64/jre/lib/amd64:/ldcg/matlab_r2012a/sys/opengl/lib/glnxa64:/ligotools/lib"
+
+PARENT 0 CHILD 1 2 3 4 5 6 7 8 9 10 

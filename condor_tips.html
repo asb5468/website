@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Sylvia Biscoveanu</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Sylvia <span class="logo_colour">Biscoveanu</span></a></h1>
+          <h2>Gravitational Wave Astrophysics</h2>
+        </div>
+        <p style="float: right; padding-top: 25px; padding-bottom: 65px;"><img src="images/MKI" alt="MKI" /></p>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="sylvia_biscoveanu_cv.pdf?ver=2.0">Curriculum Vitae</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#">Resources</a>
+            <ul>
+              <li><a href="lalinference.html">LALInference</a></li>
+              <li><a href="#">condor</a>
+                <ul>
+                  <li><a href="condor_tutorial.html">Tutorial</a></li>
+                  <li><a href="condor_tips.html">Tips</a></li>
+                </ul>
+              </li>
+	      <li><a href="vim.html">vim</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div id="sidebar_container">
+           <img width="320" height="450" src="images/12gravity-vidpromo-superJumbo.jpg" alt="photo_two" />
+      </div>
+      <div id="content">
+        <h3>Handy condor commands</h3>
+	<ul>
+	  <li>Check if your jobs are on hold: condor_q -hold</li>
+	  <li>If jobs are on hold because they're exceeding the memory limit: 
+		<br>condor_qedit sylvia.biscoveanu -constraint 'JobStatus == 5' RequestMemory 4096</li>
+	  <li>condor_qedit sylvia.biscoveanu -constraint 'JobStatus == 5' NumShadowExceptions  0 NumShadowStarts 0</li>
+	  <li>Release jobs: condor_release sylvia.biscoveanu</li>
+	  <li>Query jobs on all nodes: condor_q sylvia.biscoveanu --global</li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; Sylvia Biscoveanu | <a href="https://www.black-holes.org/">Image-SXS</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

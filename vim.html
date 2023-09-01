@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Sylvia Biscoveanu</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Sylvia <span class="logo_colour">Biscoveanu</span></a></h1>
+          <h2>Gravitational Wave Astrophysics</h2>
+        </div>
+        <p style="float: right; padding-top: 25px; padding-bottom: 65px;"><img src="images/MKI" alt="MKI" /></p>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="sylvia_biscoveanu_cv.pdf?ver=2.0">Curriculum Vitae</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#">Resources</a>
+            <ul>
+              <li><a href="lalinference.html">LALInference</a></li>
+              <li><a href="#">condor</a>
+                <ul>
+                  <li><a href="condor_tutorial.html">Tutorial</a></li>
+                  <li><a href="condor_tips.html">Tips</a></li>
+                </ul>
+              </li>
+	      <li><a href="vim.html">vim</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div id="sidebar_container">
+           <img width="320" height="450" src="images/12gravity-vidpromo-superJumbo.jpg" alt="photo_two" />
+      </div>
+      <div id="content">
+	<h2>Vim Plugin Instructions for Simulating an IDE on a Remote Cluster</h2>
+	  <p>If you want to develop code while connected to a remote cluster, you unfortunately can't use an IDE in most cases. You can use vim plugins, however, for inline code linting and tab-completion. This guide will take you through the process of installing a vim plugin manager and several useful plugins and updating your version of vim locally.</p> 
+          <h3>1. Set up a plugin manager</h3>
+	    <p>I use <a href="https://github.com/junegunn/vim-plug">vim-plug</a> but other popular options are <a href="https://github.com/tpope/vim-pathogen">vim-pathogen</a> or <a href="https://github.com/VundleVim/Vundle.vim">Vundle.</a> To install vim-plug:</p>
+	    <ol>
+	      <li>cd ~</li>
+	      <li>curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</li>
+	      <li>Open your ~/.vimrc and add the following:</li>
+		<font face="courier">
+		<p style="font-size: 75%;">
+		#Plugins will be downloaded under the specified directory.
+		<br>call plug#begin('/home/albert.einstein/.vim/plugged')
+		<br>Plug 'Valloric/YouCompleteMe'
+		<br>Plug 'nvie/vim-flake8'
+		<br>Plug 'air blade/vim-gitgutter'
+		<br>#List ends here. Plugins become visible to Vim after this call.
+		<br>call plug#end()
+		</p>
+	      </font>
+	      <li>Write and close your ~/.vimrc. Reopen it and :PlugInstall. Another window will pop up showing the progress of the installation of the three plugins we added.</li>
+	      <li>When the installation is complete, just exit vim normally.</li>
+	    </ol>
+	    <p><a href="https://github.com/nvie/vim-flake8">vim-flake8</a> is a python linter, <a href="https://github.com/Valloric/YouCompleteMe#intro">YouCompleteMe</a> is a tab-completion plugin, which is as close as you can get to an IDE on a cluster, and <a href="https://github.com/airblade/vim-gitgutter">vim-gitgutter</a> tracks changes to git version controlled files in the gutter, which is the area with signs on the left side of a vim window</p>
+	  <h3>2. Install flake8</h3>
+	    <p>Flake8 is a python style guide enforcer that reads your .py files and catches style warnings and errors. You can use it on its own or within vim.</p>
+	    <ol>
+	      <li>Check if it's already installed with which flake8.</li>
+	      <li>pip install --user flake8</li>
+	      <li>Run flake8 on any .py file and you will see a list of errors and warnings.</li>
+		<font face="courier">
+		<p style="font-size: 75%;">
+		example.py:4:1: E402 module level import not at top of file
+		<br>example.py:5:1: E402 module level import not at top of file
+		<br>example.py:11:1: E302 expected 2 blank lines, found 1
+		<br>example.py:14:24: E226 missing whitespace around arithmetic operator
+		<br>example.py:18:1: E305 expected 2 blank lines after class or function definition, found 1
+		<br>example.py:43:36: E226 missing whitespace around arithmetic operator
+		</p>
+	      </font>
+	      <li>Run flake8 in vim directly by opening the file and pressing <F7>. The list of warnings will pop up in a quickfix window. Press Ctrl-W j to jump to the quickfix window to scroll through the errors. When you're done, :ccl will close the window.</li>
+	      <li>You can choose which errors you want to suppress in your flake8 config file. This will change the options both for running flake8 from the command line and within vim. Mine is saved in ~/.flake8 and has the following options:</li>
+		<font face="courier">
+		<p style="font-size: 75%;">
+	      	  [flake8]
+		  <br>ignore = E231,W191
+		  <br>max-line-length = 150
+		</p>
+	      </font>
+	      <p>You need to start the file with [flake8] but the exclusions are up to you. I've suppressed warnings that I'm missing a space after a comma and that the indentation includes a tab. flake8 tells you the warning numbers in the output. If you now run flake8 on the same file, you'll see that those warnings are no longer output.</p>
+	    </ol>
+	  <h3>3. Update vim locally and make YouCompleteMe</h3>
+	  </p>If you opened a file with vim to try flake8, you may have seen the warning message YouCompleteMe unavailable: requires Vim 7.4.1578+. If you run vim --version, you will see that the version installed on the cluster is &lt;7.4.1578, which means we can't use YouCompleteMe. However, we can just build vim from scratch locally! If you want to skip this step, just remove Plug 'Valloric/YouCompleteMe' from your vimrc and this warning message will disappear.</p>
+	    <ol>
+	      <li>cd to wherever you want to download the source. It can't be /home/albert.einstein/.local/bin</li>
+	      <li>Make vim</li>
+		<font face="courier">
+		<p style="font-size: 75%;">
+		  git clone https://github.com/vim/vim.git
+		  <br>cd vim
+		  <br>./configure --with-features=huge \
+		  <br>            --enable-multibyte \
+		  <br>	          --enable-rubyinterp=yes \
+		  <br>	          --enable-pythoninterp=yes \
+		  <br>	          --enable-python3interp=yes \
+		  <br>	          --enable-perlinterp=yes \
+		  <br>	          --enable-cscope \
+		  <br>	          --prefix=/home/albert.einstein/.local/
+		  <br>make VIMRUNTIMEDIR=/home/albert.einstein/.local/share/vim/vim80
+		  <br>make install
+		</p>
+		</font>
+	      <p>The <a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source">installation guide</a> I consulted also has --with-python-config-dir=/usr/lib/python2.7/config passed as an option to the ./configure command, but I couldn't find the config.c files for the cluster installation of python and leaving this out doesn't seem to be causing any problems yet.</p>
+	      <li>Finish installing YouCompleteMe</li>
+		<font face="courier">
+		<p style="font-size: 75%;">
+			cd ~/.vim/plugged/YouCompleteMe
+			<br>./install.py --clang-completer
+		</p>
+	      </font>
+	      <p>or if you don't need semantic support for C-based languages:</p>
+		<font face="courier">
+		<p style="font-size: 75%;">
+			cd ~/.vim/plugged/YouCompleteMe
+			<br>./install.py
+		</p>
+	      </font>
+	      <li>Set an alias in your .bashrc file to point to your local copy of vim alias vi='/home/albert.einstein/.local/bin/vim'.</li>
+	    </ol>
+	    <p>Don't forget to source your .bashrc and change all instance of albert.einstein to your username. You can check that you are indeed running the newer version of vim by running vi --version (or whatever you set as your alias). Please note that this quickstart guide is just meant to help you get things set up, and you should consult the documentation for the three plugins we installed for more information, troubleshooting, and tutorials.</p>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; Sylvia Biscoveanu | <a href="https://www.black-holes.org/">Image-SXS</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

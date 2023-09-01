@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Sylvia Biscoveanu</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Sylvia <span class="logo_colour">Biscoveanu</span></a></h1>
+          <h2>Gravitational Wave Astrophysics</h2>
+        </div>
+        <p style="float: right; padding-top: 25px; padding-bottom: 65px;"><img src="images/MKI" alt="MKI" /></p>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="sylvia_biscoveanu_cv.pdf?ver=2.0">Curriculum Vitae</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#">Resources</a>
+            <ul>
+	      <li><a href="lalinference.html">LALInference</a></li>
+              <li><a href="#">condor</a>
+                <ul>
+                  <li><a href="condor_tutorial.html">Tutorial</a></li>
+                  <li><a href="condor_tips.html">Tips</a></li>
+                </ul>
+              </li>
+              <li><a href="vim.html">vim</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div id="sidebar_container">
+            <img width="309" height="450" src="images/soros_headshot.jpg" alt="photo_one" />
+      </div>
+      <div id="content">
+        <h1>About Me</h1>
+	<p>I am a final-year PhD candidate at MIT working on gravitational-wave data analysis in the LIGO Laboratory under the supervision of Assistant Professor Salvatore Vitale. I am a Paul and Daisy Soros Fellow and a National Science Foundation Graduate Research Fellow. I completed my undergraduate studies at the Schreyer Honors College of the Pennsylvania State University, majoring in Physics and Spanish and completing minors in Mathematics and Violin/Viola performance. I wrote my undergraduate thesis on the mass composition of ultra high energy cosmic rays. Before starting my PhD at MIT, I was a Fulbright Postgraduate Scholar at Monash University in Melbourne, Australia, working on LIGO data analysis with Assistant Professor Eric Thrane. I am also an avid musician and play with a piano quintet through the MIT Chamber Music Society as well as the <a href="http://web.mit.edu/ribotones/www/" target="_blank">MIT Ribotones</a>.</p>
+        <h3>Research Interests</h3>
+	<ul>
+	  <li>Parameter estimation and population inference for compact binary coalescences</li>
+	  <li>Multimessenger astronomy including kilonovae and gamma-ray bursts</li>
+	  <li>Stochastic gravitational-wave backgrounds</li>
+	</ul>
+	<p>You can check out some of my code on <a href="https://git.ligo.org/sylvia.biscoveanu" target="_blank">gitlab</a>. I am also a developer of <a href="https://git.ligo.org/lscsoft/bilby" target="_blank">bilby</a>.</p>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; Sylvia Biscoveanu | <a href="https://www.black-holes.org/">Image-SXS</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

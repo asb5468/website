@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Sylvia Biscoveanu</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Sylvia <span class="logo_colour">Biscoveanu</span></a></h1>
+          <h2>Gravitational Wave Astrophysics</h2>
+        </div>
+        <p style="float: right; padding-top: 25px; padding-bottom: 65px;"><img src="images/MKI" alt="MKI" /></p>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="sylvia_biscoveanu_cv.pdf?ver=2.0">Curriculum Vitae</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#">Resources</a>
+            <ul>
+              <li><a href="lalinference.html">LALInference</a></li>
+              <li><a href="#">condor</a>
+                <ul>
+                  <li><a href="condor_tutorial.html">Tutorial</a></li>
+                  <li><a href="condor_tips.html">Tips</a></li>
+                </ul>
+              </li>
+	      <li><a href="vim.html">vim</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div id="sidebar_container">
+           <img width="320" height="450" src="images/12gravity-vidpromo-superJumbo.jpg" alt="photo_two" />
+      </div>
+      <div id="content">
+        <h3>Debugging LALInference</h3>
+	<p>The following are a set of useful notes I've acquired while troubleshooting various LALInference issues.</p>
+	<ul>
+          <li>If you're using ROQ, all the events in a given .xml file need to fall within the chirp mass range for a single ROQ basis. For full table, see the <a href="https://arxiv.org/pdf/1604.08253.pdf">ROM PE paper.</a></li>
+          <li>If you're using the ROQ, fhigh is always set to srate/2. Otherwise you can set it with fhigh = {'H1':60,'L1':60,'V1':60}, for example. Additionally, srate must always be a power of 2, and if it isn't lalinference_pipe sets it to the next highest power of 2.</li>
+          <li>If you want to sample in RA, Dec, and geocentric end time instead of azimuth, cosalpha, and time in the frame of the reference detector, add the following line to your ini file: no-detector-frame =</li>
+	  <li>If you don't turn on no-detector-frame = but want to fix RA and Dec, you also have to fix the coalescence time.</li>
+          <li>If your jobs appear to be running, but they're stuck on engine.sub and they aren't producing resume hdf5 files, check to make sure that distance-min is greater than 0.</li>
+	  <li>You may need to manually edit the contents of the xmls produced using python as follows in vim: :64,$s/sim_inspiral\:process_id/process\:process_id/g</li>
+	  <li><a href="https://git.ligo.org/lscsoft/lalsuite/blob/master/lalinference/lib/lalinference_pipe_example.ini">Example ini file</a></li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; Sylvia Biscoveanu | <a href="https://www.black-holes.org/">Image-SXS</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>
