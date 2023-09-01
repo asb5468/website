@@ -58,8 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 { 
-  font: normal 250% "Abril Fatface", cursive;
-  font-size: 250%;
+  font: normal 200% "Abril Fatface", cursive;
   margin: 0;
   padding: 15px 0px 5px 0px;
 }
