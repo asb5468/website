@@ -205,7 +205,7 @@ nav {
   float: left;
   margin: 0 auto 0 auto;
   color: #222;
-  background: #905fd9;
+  background: #F08024;
 } 
 
 #site_content { 
@@ -372,7 +372,7 @@ table {
 }
 
 table tr th, table tr td { 
-  background: #70D4E6;
+  background: #60005B;
   color: #FFF;
   padding: 7px 4px;
   text-align: left;
