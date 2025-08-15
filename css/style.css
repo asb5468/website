@@ -379,7 +379,7 @@ table tr th, table tr td {
 }
   
 table tr td { 
-  background: #D3F2F7;
+  background: #60005B;
   color: #47433F;
   border-top: 1px solid #FFF;
 }
@@ -529,7 +529,7 @@ ul#nav li a {
 }
 
 ul#nav li a:hover, ul#nav li a:focus { 
-  color: #05C6FC;
+  color: #60005B;
   text-shadow: none;
 }
 
@@ -538,7 +538,7 @@ ul#nav ul li a {
 }
 
 ul#nav ul li a:hover { 
-  color: #05C6FC;
+  color: #60005B;
   margin-right: 2px;
 }
 
